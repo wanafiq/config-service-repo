@@ -1,0 +1,45 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:postgresql://ep-damp-sea-a1g2d237-pooler.ap-southeast-1.aws.neon.tech/user-service?sslmode=require&channel_binding=require
+    username: user-service
+    password: npg_oEmj4RQI0Nxl
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  level:
+    com.wanafiq.authservice: DEBUG
+    org.springframework.security: DEBUG
+    org.hibernate: DEBUG
+    com.netflix.discovery.*: DEBUG
+
+app:
+  security:
+    jwt:
+      issuer: http://localhost:8081
+      access-token-ttl: 15 # minutes
+      refresh-token-ttl: 30 # days
+      kid: 01K47PE4RNZ5WH5MS8VEKSN8HV
+      public-key: |
+        -----BEGIN PUBLIC KEY-----
+        MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE6wOCN2t30FUfpXq9WXmgZfiHkgZW
+        HBAV3S7p+2NzdtD+jXUDDk8I+nme07UazODt4F2oNP3Mk5HhhWNHrt63+g==
+        -----END PUBLIC KEY-----
+      private-key: |
+        -----BEGIN PRIVATE KEY-----
+        MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgsqSrBiW89OL25NF0
+        3dIGDRClmD82QPfKp9xSf3c69SKhRANCAATrA4I3a3fQVR+ler1ZeaBl+IeSBlYc
+        EBXdLun7Y3N20P6NdQMOTwj6eZ7TtRrM4O3gXag0/cyTkeGFY0eu3rf6
+        -----END PRIVATE KEY-----
+  client:
+    id: app-client
+    name: Mobile / Web App Client
