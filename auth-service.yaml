@@ -43,3 +43,5 @@ app:
   client:
     id: app-client
     name: Mobile / Web App Client
+    default-redirect-uris:
+      - http://localhost:3000/callback
