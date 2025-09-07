@@ -7,7 +7,7 @@ spring:
   datasource:
     url: jdbc:postgresql://ep-damp-sea-a1g2d237-pooler.ap-southeast-1.aws.neon.tech/auth-service?sslmode=require&channel_binding=require
     username: auth-service
-    password: npg_oEmj4RQI0Nxl
+    password: npg_JtErx03TIimn
     driver-class-name: org.postgresql.Driver
   jpa:
     show-sql: false
