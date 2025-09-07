@@ -5,8 +5,8 @@ spring:
   application:
     name: auth-service
   datasource:
-    url: jdbc:postgresql://ep-damp-sea-a1g2d237-pooler.ap-southeast-1.aws.neon.tech/user-service?sslmode=require&channel_binding=require
-    username: user-service
+    url: jdbc:postgresql://ep-damp-sea-a1g2d237-pooler.ap-southeast-1.aws.neon.tech/auth-service?sslmode=require&channel_binding=require
+    username: npg_N9PDrFHjBQx4
     password: npg_oEmj4RQI0Nxl
     driver-class-name: org.postgresql.Driver
   jpa:
